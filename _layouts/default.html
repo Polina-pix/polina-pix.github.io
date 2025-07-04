@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem;
+        line-height: 1.6;
+      }
+      header h1 a {
+        text-decoration: none;
+        color: #0057e7;
+      }
+      h1, h2 {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: .3em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+  </body>
+</html>
